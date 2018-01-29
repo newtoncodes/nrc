@@ -1,0 +1,16 @@
+.idea/*
+!.idea/libraries
+!.idea/inspectionProfiles
+!.idea/copyright
+!.idea/.name
+!.idea/codeStyleSettings.xml
+!.idea/encodings.xml
+!.idea/jsLibraryMappings.xml
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vagrant.xml
+!.idea/watcherTasks.xml
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
