@@ -1,0 +1,237 @@
+
+.Tooltip {
+    display: block;
+    position: absolute;
+    visibility: visible;
+    z-index: 1070;
+
+    &.Tooltip-hidden {
+        display: none;
+    }
+
+    &.Tooltip-placement-top,
+    &.Tooltip-placement-topLeft,
+    &.Tooltip-placement-topRight {
+        padding: 5px 0 9px 0;
+    }
+
+    &.Tooltip-placement-right,
+    &.Tooltip-placement-rightTop,
+    &.Tooltip-placement-rightBottom {
+        padding: 0 5px 0 9px;
+    }
+
+    &.Tooltip-placement-bottom,
+    &.Tooltip-placement-bottomLeft,
+    &.Tooltip-placement-bottomRight {
+        padding: 9px 0 5px 0;
+    }
+
+    &.Tooltip-placement-left,
+    &.Tooltip-placement-leftTop,
+    &.Tooltip-placement-leftBottom {
+        padding: 0 9px 0 5px;
+    }
+
+    .Tooltip-arrow {
+        border-color: transparent;
+        border-style: solid;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+
+    &.Tooltip-placement-top .Tooltip-arrow,
+    &.Tooltip-placement-topLeft .Tooltip-arrow,
+    &.Tooltip-placement-topRight .Tooltip-arrow {
+        border-width: 5px 5px 0;
+        bottom: 4px;
+        margin-left: -5px;
+    }
+
+    &.Tooltip-placement-top .Tooltip-arrow {
+        left: 50%;
+    }
+
+    &.Tooltip-placement-topLeft .Tooltip-arrow {
+        left: 15%;
+    }
+
+    &.Tooltip-placement-topRight .Tooltip-arrow {
+        right: 15%;
+    }
+
+    &.Tooltip-placement-right .Tooltip-arrow,
+    &.Tooltip-placement-rightTop .Tooltip-arrow,
+    &.Tooltip-placement-rightBottom .Tooltip-arrow {
+        border-width: 5px 5px 5px 0;
+        left: 4px;
+        margin-top: -5px;
+    }
+
+    &.Tooltip-placement-right .Tooltip-arrow {
+        top: 50%;
+    }
+
+    &.Tooltip-placement-rightTop .Tooltip-arrow {
+        top: 15%;
+        margin-top: 0;
+    }
+
+    &.Tooltip-placement-rightBottom .Tooltip-arrow {
+        bottom: 15%;
+    }
+
+    &.Tooltip-placement-left .Tooltip-arrow,
+    &.Tooltip-placement-leftTop .Tooltip-arrow,
+    &.Tooltip-placement-leftBottom .Tooltip-arrow {
+        border-width: 5px 0 5px 5px;
+        margin-top: -5px;
+        right: 4px;
+    }
+
+    &.Tooltip-placement-left .Tooltip-arrow {
+        top: 50%;
+    }
+
+    &.Tooltip-placement-leftTop .Tooltip-arrow {
+        top: 15%;
+        margin-top: 0;
+    }
+
+    &.Tooltip-placement-leftBottom .Tooltip-arrow {
+        bottom: 15%;
+    }
+
+    &.Tooltip-placement-bottom .Tooltip-arrow,
+    &.Tooltip-placement-bottomLeft .Tooltip-arrow,
+    &.Tooltip-placement-bottomRight .Tooltip-arrow {
+        border-width: 0 5px 5px;
+        margin-left: -5px;
+        top: 4px;
+    }
+
+    &.Tooltip-placement-bottom .Tooltip-arrow {
+        left: 50%;
+    }
+
+    &.Tooltip-placement-bottomLeft .Tooltip-arrow {
+        left: 15%;
+    }
+
+    &.Tooltip-placement-bottomRight .Tooltip-arrow {
+        right: 15%;
+    }
+
+    &.Tooltip.Tooltip-zoom-enter,
+    &.Tooltip.Tooltip-zoom-leave {
+        display: block;
+    }
+
+    &.Tooltip-zoom-enter,
+    &.Tooltip-zoom-appear {
+        opacity: 0;
+        -webkit-animation-duration: 0.3s;
+        animation-duration: 0.3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+
+    &.Tooltip-zoom-leave {
+        -webkit-animation-duration: 0.3s;
+        animation-duration: 0.3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+        animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+
+    &.Tooltip-zoom-enter.Tooltip-zoom-enter-active,
+    &.Tooltip-zoom-appear.Tooltip-zoom-appear-active {
+        -webkit-animation-name: rcToolTipZoomIn;
+        animation-name: rcToolTipZoomIn;
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+    }
+
+    &.Tooltip-zoom-leave.Tooltip-zoom-leave-active {
+        -webkit-animation-name: rcToolTipZoomOut;
+        animation-name: rcToolTipZoomOut;
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+    }
+}
+
+@-webkit-keyframes rcToolTipZoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes rcToolTipZoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes rcToolTipZoomOut {
+    0% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+    }
+}
+
+@keyframes rcToolTipZoomOut {
+    0% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+    }
+}

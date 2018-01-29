@@ -1,0 +1,68 @@
+
+.Table {
+    .Table-header {
+        table {
+            width: 100%;
+        }
+
+        .Table-header-padding {
+            background: white;
+        }
+    }
+
+    .Table-body {
+        overflow: auto;
+
+        table {
+            width: 100%;
+        }
+    }
+
+    .Table-footer {
+        background: white;
+    }
+
+    table {
+        thead {
+            tr {
+                th {
+                    background: white;
+                    border: 1px solid gray;
+                    box-sizing: border-box;
+
+                    &.Table-cell-first {}
+                    &.Table-cell-last {}
+
+                    &.Table-cell-sortable {
+                        color: blue;
+                        cursor: pointer;
+                    }
+
+                    &.Table-cell-sorted-asc {
+                        color: green;
+                    }
+
+                    &.Table-cell-sorted-desc {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border: 1px solid gray;
+                    box-sizing: border-box;
+
+                    &.Table-cell-first {}
+                    &.Table-cell-last {}
+
+                    &.Table-cell-sorted {
+                        background: lightgray;
+                    }
+                }
+            }
+        }
+    }
+}

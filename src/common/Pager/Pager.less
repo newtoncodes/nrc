@@ -1,0 +1,51 @@
+
+.Pager {
+    display: inline-block;
+
+    .Pager-buttons {
+        list-style: none;
+        text-align: center;
+
+        &:after {
+            clear: both;
+            content: " ";
+            display: block;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        .Pager-button {
+            cursor: pointer;
+            display: inline-block;
+
+            &.Pager-buttons-disabled {
+                cursor: not-allowed;
+            }
+
+            &.Pager-buttons-prev {}
+            &.Pager-buttons-next {}
+            &.Pager-buttons-page {}
+            &.Pager-buttons-group-prev,
+            &.Pager-buttons-group-next {
+                .Icon.angle {
+                    display: none;
+                }
+
+                &:hover {
+                    .Icon.ellipsis {
+                        display: none;
+                    }
+
+                    .Icon.angle {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            &.Pager-buttons-page-active {
+                color: limegreen;
+            }
+        }
+    }
+}

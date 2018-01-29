@@ -1,0 +1,61 @@
+
+.ScrollBar {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    & > div {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        position: absolute;
+        z-index: 100000;
+        background: #585858;
+
+        border-radius: 2px;
+
+        &:hover {
+            background: #383838;
+        }
+    }
+
+    &.ScrollBar-dragging {
+        & > div {
+            background: #181818;
+        }
+    }
+
+    &.ScrollBar-x {
+        height: 6px;
+        width: 100%;
+
+        & > div {
+            height: 100%;
+            width: 0;
+        }
+    }
+
+    &.ScrollBar-y {
+        width: 6px;
+        height: 100%;
+
+        & > div {
+            width: 100%;
+            height: 0;
+        }
+
+    }
+}
+
+.ScrollBar-disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

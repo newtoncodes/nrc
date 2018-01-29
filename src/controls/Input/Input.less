@@ -1,0 +1,44 @@
+
+.Input {
+    display: inline-block;
+
+    input {
+        display: inline-block;
+        outline: none;
+    }
+
+    &.Input-accessories {
+        display: table;
+        white-space: nowrap;
+
+        .accessories {
+            display: table-cell;
+            width: 1%;
+        }
+
+        input {
+            display: table-cell;
+            width: 100%;
+        }
+    }
+
+    &.Input-disabled {
+        input {
+            color: lightgray;
+        }
+    }
+
+    &.Input-readonly {
+        input {
+        }
+    }
+
+    .Input-reveal-button {
+        cursor: pointer;
+        display: inline-block;
+
+        &.Input-reveal-button-on {
+
+        }
+    }
+}

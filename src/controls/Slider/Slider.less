@@ -1,0 +1,62 @@
+
+.Slider {
+    @handle-size: 20px;
+
+    height: @handle-size;
+    position: relative;
+
+    .Slider-track {
+        background: lightgray;
+        height: 4px;
+        margin: -2px 0px 0px 0px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        z-index: 1;
+
+        div {
+            background: black;
+            height: inherit;
+            left: 0%;
+            position: absolute;
+            right: 0%;
+            top: 0px;
+        }
+    }
+
+    .Slider-handle {
+        background: lightgray;
+        border-radius: 50%;
+        height: @handle-size;
+        left: 0%;
+        margin: @handle-size * -0.5 0px 0px @handle-size * -0.5;
+        position: absolute;
+        top: 50%;
+        width: @handle-size;
+        z-index: 2;
+    }
+
+    &.Slider-disabled {
+        .Slider-track {
+            background: lightgray;
+
+            div {
+                opacity: 0.5;
+            }
+        }
+
+        .Slider-handle {
+            opacity: 0.9;
+        }
+    }
+
+    &.Slider-readonly {
+        .Slider-handle {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.Slider-handle-cursor {
+    cursor: col-resize;
+}

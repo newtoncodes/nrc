@@ -1,0 +1,19 @@
+
+.Accordion {
+    .Accordion-panel {
+        .Accordion-panel-section {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .Accordion-panel-content {
+            display: none;
+        }
+
+        &.Accordion-panel-expanded {
+            .Accordion-panel-content {
+                display: block;
+            }
+        }
+    }
+}

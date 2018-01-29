@@ -1,0 +1,27 @@
+
+.Captcha {
+    img {
+        display: inline-block;
+        height: 50px;
+    }
+
+    input {
+        display: inline-block;
+        outline: none;
+    }
+
+    &.Captcha-disabled {
+        input {
+            color: lightgray;
+        }
+    }
+
+    &.Captcha-readonly {
+        input {
+        }
+    }
+
+    .Captcha-refresh {
+        display: inline-block;
+    }
+}

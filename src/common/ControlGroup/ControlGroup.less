@@ -1,0 +1,40 @@
+
+.ControlGroup {
+    display: inline-block;
+
+    .Button {
+        margin: 0px;
+    }
+
+    .Input {
+        margin: 0px;
+    }
+
+    &.ControlGroup-horizontal {
+        .Button + .Button {
+            border-left: 0px;
+        }
+
+        .Input + .Input {
+            border-left: 0px;
+        }
+    }
+
+    &.ControlGroup-vertical {
+        .Button {
+            display: block;
+        }
+
+        .Button + .Button {
+            border-top: 0px;
+        }
+
+        .Input {
+            display: block;
+        }
+
+        .Input + .Input {
+            border-top: 0px;
+        }
+    }
+}

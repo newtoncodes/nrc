@@ -1,0 +1,25 @@
+
+.Dropdown {
+    cursor: default;
+    display: inline-block;
+    position: relative;
+
+    &.Dropdown-open {
+        & > div.body {
+            display: block !important;
+        }
+    }
+
+    & > div.label {
+        cursor: pointer;
+    }
+
+    & > div.body {
+        display: none;
+        left: 0;
+        list-style-type: none;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+    }
+}

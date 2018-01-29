@@ -1,0 +1,23 @@
+
+.Select:not(.Select-inner) {
+    display: inline-block;
+
+    .Select.Select-inner {
+        display: block;
+    }
+
+    &.Select-accessories {
+        display: table;
+        white-space: nowrap;
+
+        .accessories {
+            display: table-cell;
+            width: 1%;
+        }
+
+        .Select.Select-inner {
+            display: table-cell;
+            width: 100%;
+        }
+    }
+}
